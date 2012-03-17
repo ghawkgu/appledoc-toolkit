@@ -22,3 +22,6 @@
 
 ## Todo
 * Write custom code snippets for appledoc templates.
+
+## License
+* This toolkit is licensed under the MIT license.
