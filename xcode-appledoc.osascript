@@ -1,0 +1,17 @@
+#!/usr/bin/osascript
+set my_path to (path to me) as text
+set myPath to POSIX path of my_path
+
+tell application "Xcode"
+    tell first project
+
+           -- variables to export
+               set projectName to (get name)
+               set projectDir to (get project directory)
+               set company to (get organization name)
+
+           -- invoke script passing extracted variables
+               do shell script ("sh `dirname " & myPath & "`/generate-appledoc.sh " & projectDir & " " & projectName & " " & company)
+
+    end tell
+end tell
